@@ -1,0 +1,10 @@
+[15-Jun-2020 03:47:59 UTC] PHP Warning:  mysqli_connect(): (42000/1044): Access denied for user 'slogive'@'localhost' to database 'slogive' in /home/cvu6u47dsx4w/public_html/skills.slogive.com/php/connect-database.php on line 7
+[15-Jun-2020 03:48:00 UTC] PHP Warning:  mysqli_connect(): (42000/1044): Access denied for user 'slogive'@'localhost' to database 'slogive' in /home/cvu6u47dsx4w/public_html/skills.slogive.com/php/connect-database.php on line 7
+[15-Jun-2020 03:50:07 UTC] PHP Parse error:  syntax error, unexpected '<', expecting end of file in /home/cvu6u47dsx4w/public_html/skills.slogive.com/php/connect-database.php on line 15
+[15-Jun-2020 03:50:08 UTC] PHP Parse error:  syntax error, unexpected '<', expecting end of file in /home/cvu6u47dsx4w/public_html/skills.slogive.com/php/connect-database.php on line 15
+[15-Jun-2020 03:50:09 UTC] PHP Parse error:  syntax error, unexpected '<', expecting end of file in /home/cvu6u47dsx4w/public_html/skills.slogive.com/php/connect-database.php on line 15
+[15-Jun-2020 03:52:30 UTC] PHP Parse error:  syntax error, unexpected '<', expecting end of file in /home/cvu6u47dsx4w/public_html/skills.slogive.com/php/connect-database.php on line 15
+[15-Jun-2020 04:03:14 UTC] PHP Warning:  require(php/Data.php): failed to open stream: No such file or directory in /home/cvu6u47dsx4w/public_html/skills.slogive.com/index.php on line 1
+[15-Jun-2020 04:03:14 UTC] PHP Fatal error:  require(): Failed opening required 'php/Data.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home/cvu6u47dsx4w/public_html/skills.slogive.com/index.php on line 1
+[15-Jun-2020 04:03:29 UTC] PHP Warning:  require(php/Data.php): failed to open stream: No such file or directory in /home/cvu6u47dsx4w/public_html/skills.slogive.com/index.php on line 1
+[15-Jun-2020 04:03:29 UTC] PHP Fatal error:  require(): Failed opening required 'php/Data.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home/cvu6u47dsx4w/public_html/skills.slogive.com/index.php on line 1

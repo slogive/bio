@@ -1,0 +1,481 @@
+@import "normalize";
+$color1: #13293d;
+$color2: #006494;
+$pad: 10px;
+$colorvar: rgba(19, 41, 61, 0.2);
+
+@mixin box {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+@mixin img {
+    display: block;
+    width: 100%;
+    @include box;
+}
+
+@mixin border {
+    border: dashed black thin;
+}
+
+@mixin font1 {
+    font-family: 'Font1';
+}
+
+@mixin shadow1 {
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+}
+@mixin noselect {
+    -webkit-touch-callout: none; 
+	-webkit-user-select: none; 
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+@font-face {
+    font-family: 'Font1';
+    src: url(../font/Oswald.ttf);
+}
+
+::selection {
+    background: $color1;
+    color: white;
+}
+::-moz-selection {
+    background: $color1;
+    color: white;
+}
+
+/////////////////////
+
+@media only screen and (max-width: 600px) {
+    .Start__Div {
+        background-image: url(../img/svg.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom;
+        width: 100%;
+        height: 50px;
+        @include box;
+    }
+}
+@media only screen and (min-width: 601px) {
+    .Start__Div {
+        background-image: url(../img/svg.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom;
+        width: 100%;
+        height: 125px;
+        @include box;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .Finish__Div {
+        background-image: url(../img/svg__alt.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
+        width: 100%;
+        height: 50px;
+        @include box;
+    }
+}
+@media only screen and (min-width: 601px) {
+    .Finish__Div {
+        background-image: url(../img/svg__alt.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
+        width: 100%;
+        height: 125px;
+        @include box;
+    }
+}
+
+.Bio__Social {
+    display: inline-flex;
+    grid-auto-flow: column;
+    column-gap: 20px;
+    .Bio__Svg {
+        fill: $color1;
+        width: 30px;
+        height: 30px;
+    }
+    .Bio__Svg:hover {
+        cursor: pointer;
+        animation: Bio__Svg 0.5s both;
+        -moz-animation: Bio__Svg 0.5s both;
+        -webkit-animation: Bio__Svg 0.5s both;
+        @keyframes Bio__Svg {
+            0% {fill: $color1;}
+            100% {fill: $color2;}
+        }
+        @-moz-keyframes Bio__Svg {
+            0% {fill: $color1;}
+            100% {fill: $color2;}
+        }
+        @-webkit-keyframes Bio__Svg {
+            0% {fill: $color1;}
+            100% {fill: $color2;}
+        }
+    }
+}
+
+.Main__Container {
+    @include box;
+    padding: 0px $pad;
+    display: grid;
+    align-content: center;
+    .Bio__Container {
+        .Bio__Text {
+            display: grid;
+            row-gap: 20px;
+            .Bio__Text__0 {
+                @include font1;
+                font-size: calc(1em * 3);
+            }
+            .Bio__Text__1 {
+                @include font1;
+                font-size: calc(1em * 5);
+            }
+            .Bio__Text__2 {
+                @include font1;
+                font-size: calc(1em * 2);
+            }
+            .Bio__Text__3 {
+                @include font1;
+                font-size: calc(1em * 1.5);
+            }
+            .Bio__Button {
+                width: fit-content;
+                padding: $pad 20px;
+                border-radius: 20px;
+                outline: none;
+                border: none;
+                background-color: $color1;
+                color: white;
+                font-size: calc(1em * 1.5);
+                @include font1;
+            }
+            .Bio__Button:hover {
+                cursor: pointer;
+                animation: Bio__Button 0.5s both;
+                -moz-animation: Bio__Button 0.5s both;
+                -webkit-animation: Bio__Button 0.5s both;
+                @keyframes Bio__Button {
+                    0% {background-color: $color1;}
+                    100% {background-color: $color2; color: black;}
+                }
+                @-moz-keyframes Bio__Button {
+                    0% {background-color: $color1;}
+                    100% {background-color: $color2; color: black;}
+                }
+                @-webkit-keyframes Bio__Button {
+                    0% {background-color: $color1;}
+                    100% {background-color: $color2; color: black;}
+                }
+            }
+        }
+    }
+}
+
+span.Title {
+    @include font1;
+    padding: calc(#{$pad} * 2) 0;
+    font-size: calc(1em * 3);
+    display: grid;
+    justify-self: center;
+    text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .Main__Container {
+        display: grid;
+        align-content: center;
+        .Bio__Container {
+            display: grid;
+            column-gap: 50px;
+            padding: 10px 10px;
+            min-height: calc(100vh - 20px);
+            div.Bio__Imagen {
+                display: none;
+            }
+            div.Bio__Imagen__Inside {
+                display: grid;
+                img.Bio__Imagen {
+                    display: block;
+                    align-self: center;
+                    height: auto;
+                    @include img;
+                    @include box;
+                }
+            }
+            .Bio__Text {
+                justify-content: center;
+                align-content: center;
+                text-align: center;
+                .Bio__Social {
+                    justify-self: center;
+                }
+                .Bio__Button {
+                    justify-self: center;
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width: 601px) {
+    .Main__Container {
+        min-height: 100vh;
+        display: grid;
+        align-content: center;
+        .Bio__Container {
+            display: grid;
+            grid-template-columns: 30% 1fr;
+            column-gap: 50px;
+            min-height: 100vh;
+            div.Bio__Imagen {
+                display: grid;
+                img.Bio__Imagen {
+                    display: block;
+                    width: 60%;
+                    justify-self: end;
+                    align-self: center;
+                    height: auto;
+                    @include box;
+                }
+            }
+            div.Bio__Imagen__Inside {
+                display: none;
+            }
+            .Bio__Text {
+                align-content: center;
+                width: 80%;
+            }
+        }
+    }
+}
+
+.Skills {
+    @include font1;
+    background-color: $color1;
+
+    .Skills__Container {
+        display: grid;
+        justify-content: center;
+        column-gap: $pad;
+
+        .Skills__Item__Container {
+            display: grid;
+            row-gap: $pad;
+            .Skills__Item {
+                border-radius: 50%;
+                background-image: linear-gradient(432deg, white 50%, transparent 0, transparent),linear-gradient(270deg, white 50%,$color2 0, $color2);
+                width: 80px;
+                height: 80px;
+                padding: $pad;
+                position: relative;
+                .Skills__Item__Inside {
+                    border-radius: 50%;
+                    width: 100%;
+                    height: 100%;
+                    background-color: $color1;
+                    display: grid;
+                    justify-content: center;
+                    align-content: center;
+                    font-size: calc(1em * 1.5);
+                }
+            }
+            span.Skills__Title {
+                display: grid;
+                justify-self: center;
+                text-align: center;
+                border-bottom: solid white thin;
+                padding-bottom: 5px;
+                font-size: calc(1em * 1.5);
+                margin-bottom: $pad;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+    }
+    
+    @media only screen and (min-width: 601px) {
+        .Skills__Container {
+            grid-auto-flow: column;
+        }
+    }
+
+    
+    
+}
+
+.Projects {
+    .Projects__Container {
+        @include font1;
+        @include box;
+        display: grid;
+        margin: calc(#{$pad} / 2);
+        .Project__Item {
+            //background-color: $colorvar;
+            @include shadow1;
+            div.Item__Tag {
+                display: flex;
+                flex-wrap: wrap;
+                column-gap: calc(#{$pad} / 2);
+                row-gap: calc(#{$pad} / 2);
+                padding: calc(#{$pad} / 2);
+                button.Item__Tag {
+                    padding: 5px 10px;
+                    width: fit-content;
+                    outline: none;
+                    border: none;
+                    background-color: $color1;
+                    color: white;
+                    cursor: pointer;
+                }
+                div.Item__Tag.Red {
+                    background-color: red !important;
+                }
+                div.Item__Tag__Color {
+                    border-radius: 50%;
+                    height: 30px;
+                    width: 29px;
+                    cursor: pointer;
+                }
+            }
+            span.Project__Title {
+                font-size: calc(1em * 1.5);
+                padding: calc(#{$pad} / 2);
+            }
+            margin: $pad !important;
+            display: grid;
+            @include box;
+            display: grid;
+            .Project__Img {
+                @include img;
+            }
+        } 
+        @media only screen and (min-width: 1024px) {
+            grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+        }
+        @media only screen and (max-width: 1023px) and (min-width: 768px) {
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        }
+        @media only screen and (max-width: 767px) and (min-width: 540px) {
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        }
+    }
+}
+
+.Footer {
+    background-color: $color1;
+    display: grid;
+    color: white;
+    font-size: calc(1em * 1.5);
+    padding: $pad; 
+    @include font1;
+    .Footer__Items {
+        text-align: center;
+        justify-content: center;
+        column-gap: $pad;
+        row-gap: $pad;
+        width: 100%;
+        cursor: pointer;
+        @include box;
+        a {
+            color: white;
+            text-decoration: none;
+            border: solid thin white;
+            padding: $pad calc(#{$pad} * 2);
+            border-radius: calc(#{$pad} * 2);
+        }
+        a:hover {
+            background-color: $color2;
+            animation: Footer__Button 1s both;
+            -moz-animation: Footer__Button 1s both;
+            -webkit-animation: Footer__Button 1s both;
+            @keyframes Footer__Button {
+                0% {
+                    background: linear-gradient(180deg, $color2 0%, rgba(0,100,148,0) 100%);
+                }
+                100% {background-color: $color2;}
+            }
+            @-moz-keyframes Footer__Button {
+                0% {}
+                100% {background-color: #006494;}
+            }
+            @-webkit-keyframes Footer__Button {
+                0% {}
+                50% {
+                    background: linear-gradient(180deg, $color2 0%, rgba(0,100,148,0) 100%);
+                }
+                100% {background-color: $color2;}
+            } 
+        }
+    }
+    @media only screen and (max-width: 600px) {
+        .Footer__Items {
+            display: grid;
+        }
+    }
+    @media only screen and (min-width: 601px) {
+        .Footer__Items {
+            display: flex;
+            @media only screen and (min-width: 1024px) {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+            @media only screen and (max-width: 1023px) and (min-width: 768px) {
+                grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            }
+            @media only screen and (max-width: 767px) and (min-width: 540px) {
+                grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+            }
+        }
+    }
+    
+    .Bio__Social {
+        justify-self: center;
+        .Bio__Svg__Alt {
+            fill: white;
+            width: 30px;
+        height: 30px;
+        }
+        .Bio__Svg__Alt:hover {
+            cursor: pointer;
+            animation: Bio__Svg__Alt 0.5s both;
+            -moz-animation: Bio__Svg__Alt 0.5s both;
+            -webkit-animation: Bio__Svg__Alt 0.5s both;
+            @keyframes Bio__Svg__Alt {
+                0% {fill: white;}
+                100% {fill: $color2;}
+            }
+            @-moz-keyframes Bio__Svg__Alt {
+                0% {fill: white;}
+                100% {fill: $color2;}
+            }
+            @-webkit-keyframes Bio__Svg__Alt {
+                0% {fill: white;}
+                100% {fill: $color2;}
+            }
+        }
+    }
+
+    hr {
+        width: 85%;
+    }
+
+    .Copyright {
+        font-size: calc(1em / 1.5) !important;
+        text-align: center;
+        padding: $pad 0;
+    }
+}

@@ -1,0 +1,161 @@
+body, html {
+    margin: 0;
+    font-family: "LogoFont";
+    background-color: #13293d;
+    color: #e8f1f2;
+}
+
+@font-face {
+    font-family: 'LogoFont';
+    src: url('../fonts/AVGARDN_2.TTF');
+    font-style: normal;
+    font-weight: bold;
+}
+
+div.Site-Container {
+    display: grid;
+}
+
+div.Site-Nav {
+    background-color: #e8f1f2;
+    padding: 10px;
+    display: grid;
+}
+
+span.Site-Nav {
+    text-align: center;
+}
+
+div.Site-Skills-Container {
+    display: grid;
+    justify-self: left;
+    column-gap: 10px;
+    row-gap: 10px;
+    min-width: 1fr;
+    padding: 10px;
+    margin: 10px;
+    box-sizing: border-box;
+    background-color: #e8f1f2;
+    border-radius: 10px;
+    color: #13293d;
+}
+
+div.Skills-Container { border-left: solid #13293d; padding: 0 10px;}
+
+@media only screen and (max-width: 600px) {
+    span.Skill.Title { font-size: 4vh; }
+    span.Site-Nav { font-size: 5vh; }
+}
+
+@media only screen and (min-width: 601px) {
+    span.Skill.Title {font-weight: normal; font-size: x-large;}
+    span.Site-Nav { font-size: 3vw; }
+}
+
+.Site-Container-Logo {
+    content: '';
+    background-image: url("../img/Slogive-Logos/Logo-Simple.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100px;
+    height: 100px;
+    justify-self: center;
+}
+
+div.Login-Container {
+    justify-self: center;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: #e8f1f2;
+    padding: 20px;
+    display: grid;
+    justify-items: center;
+    box-sizing: border-box;
+}
+
+@media only screen and (max-width: 600px) {
+    div.Login-Container {min-width: fit-content;}
+    form.Login-Form input {font-size: x-large;}
+}
+
+@media only screen and (min-width: 601px) {
+    div.Login-Container {max-width: fit-content;}
+}
+
+form.Login-Form {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    font-size: xx-large;
+    gap: 10px;
+    box-sizing: border-box;
+}
+
+.Form-Container-Logo {
+    content: '';
+    background-image: url("../img/Slogive-Logos/Logo-Simple.svg");
+    background-size: 65%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 150px;
+    height: 150px;
+    justify-self: center;
+    background-color: #13293d;
+    border-radius: 50%;
+}
+
+form.Login-Form input[type="text"] {
+    background: url('../img/icons/login/user-solid.svg') no-repeat scroll 7px center;
+}
+
+form.Login-Form input[type="password"] {
+    background: url('../img/icons/login/lock-solid.svg') no-repeat scroll 7px center;
+}
+
+form.Login-Form input[type="email"] {
+    background: url('../img/icons/login/envelope-solid.svg') no-repeat scroll 7px center;
+}
+
+form.Login-Form input[type="text"], form.Login-Form input[type="password"], form.Login-Form input[type="email"] {
+    text-indent: 25px;
+    background-size: 20px 20px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #e8f1f2;
+  transition: background-color 5000s ease-in-out 0s;
+  background-size: 20px 20px;
+  background: url('../img/icons/login/envelope-solid.svg') no-repeat scroll 7px center;
+}
+
+form.Login-Form input::placeholder {
+    color: #e8f1f285;
+}
+
+form.Login-Form input {
+    outline: none;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(19, 41, 61, 50) !important;
+    color: #e8f1f2;
+    box-sizing: border-box;
+}
+
+form.Login-Form input[type="submit"] {
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+span.Login-Form-Error {
+    color: black;
+    font-size: x-large;
+}
+
+@media only screen and (min-width: 601px) {
+    form.Login-Form input {font-size: xx-large;}
+}
